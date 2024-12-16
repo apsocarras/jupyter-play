@@ -22,8 +22,9 @@ source .venv/bin/activate
 uv add --group fun jupyter-play # e.g. add a "fun" group under your development dependencies
 ```
 
+The package source distribution includes a `.zip` of html games to play. `setup.py` includes a custom build step to unzip the game files from this `html_games.zip`; this means the files are unzipped in the installed version of the package (the "wheel"). More information on source distributions vs wheels can be found [here](https://packaging.python.org/en/latest/discussions/package-formats/#package-formats).
 
-The package files include a `.zip` of html games to play. `setup.py` includes a custom build step to unzip the game files from `html_games.zip`
+- *To packaging workshop attendees (12/20/24):* see if you can figure out how to exclude `.zip` from the installed state!
 
 `download_games.sh` is the script to download and zip the game files from the original github gists. 
 
