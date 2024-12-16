@@ -3,7 +3,9 @@
 
 This package contains a number of basic HTML/CSS/JS games you can play in your jupyter notebook! 
 
-All credit for making the games goes to [Steven Lambert](https://gist.github.com/straker).
+All credit for making the original game files goes to [Steven Lambert](https://gist.github.com/straker).
+
+![snake_preview.gif](snake_preview.gif)
 
 ### Installation
 
@@ -30,16 +32,13 @@ The package files include a `.zip` of html games to play. `setup.py` includes a 
 ```python 
 ## in an .ipynb file
 
-from jupyter_play import games, load_html_files
+from jupyter_play import PLAY
 
 # View the list of games included
-print(games.list())
+print(PLAY.list_games())
 
 # Play any game you like
-games.SNAKE()
-
-# View game file names and html content  
-load_html_files()
+PLAY.SNAKE()
 ```
 
 You can also run your own games (right now just from a string)
@@ -57,3 +56,10 @@ Please note that this package is only meant to work with basic, self-contained, 
 ### Contributing 
 
 The games' creator intentionally left some core features lacking as an exercise for the reader. I may be making some of these additions myself, but if you're excited to contribute yourself please feel free to open a PR and edit one of the base game files in `source_games`.
+
+I have other ideas for feature additions as well: 
+
+* Basic AIs to play the games for you in a screensaver-like fashion.
+* Configure difficulty and speed settings. 
+* Introduce new games.
+* Add new levels (procedurally generated?)
